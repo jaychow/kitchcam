@@ -9,6 +9,7 @@ import {
     LoginSuccess,
     Survey,
     NotFound,
+    Account
 } from 'containers';
 
 export default (store) => {
@@ -46,6 +47,7 @@ export default (store) => {
             <Route path="login" component={Login}/>
             <Route path="survey" component={Survey}/>
             <Route path="widgets" component={Widgets}/>
+            <Route path="account" component={Account}/>
 
             { /* Catch all route */ }
             <Route path="*" component={NotFound} status={404}/>

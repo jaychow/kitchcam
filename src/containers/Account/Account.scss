@@ -10,6 +10,9 @@
   text-align: center;
   color: #333;
 }
+.subscribers {
+  background: #333333;
+}
 .topChefs {
   li {
     padding:5px;
@@ -29,9 +32,4 @@
 }
 .chefNameTitle {
   font-size:12px;
-}
-.woodHeader {
-  background: #2d2d2d url('../Home/wood.png') no-repeat center center;
-  height: 60px;
-  width: 100%;
 }

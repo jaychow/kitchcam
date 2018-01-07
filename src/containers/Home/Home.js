@@ -10,6 +10,7 @@ export default class Home extends Component {
 
         return (
             <div className={styles.home + ' container-fluid'}>
+                <div className="row"><div className={styles.woodHeader}></div></div>
                 <Helmet title="Home"/>
                 <h1>KitchCam</h1>
                 <div className="bottom-space">
@@ -38,8 +39,9 @@ export default class Home extends Component {
                     </div>
                     <div className="col-xs-12 col-sm-8">
                         <h5>Chicken Picatta<span className={styles.chefNameTitle}> - By Ali Fernandez</span></h5>
-                        Battle Circuit takes place every Wednesday at Next Level, New York's home ground for some of the best Fighting Game players in the world. This weeks event will feature Street Fighter V, and many popular players will be in attendance!
-                        Click here to watch and chat live!
+                        Yummmy yummy delicious chicken picatta dish come check out her small changes that make for
+                        a great recipe!
+                        - Click here to watch and chat live!
                     </div>
                 </div>
                 <div className="row bottom-space">
