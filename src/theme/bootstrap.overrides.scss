@@ -6,8 +6,19 @@
 .navbar-brand {
   position: relative;
   padding-left: 50px;
+  color: #33b7a5;
 }
-
+.navbar-default {
+  background-color: #343D46;
+  border-color: #33b7a5;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #c0c5ce;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #fff2f2;
+  background-color: transparent;
+}
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -22,7 +33,7 @@
   margin-bottom:20px;
 }
 .btn-kitchen {
-  color: #fff;
+  color: #343D46;
   background-color: #33b7a5;
   border-color: #333;
 }

@@ -4,6 +4,7 @@ import { isLoaded as isAuthLoaded, load as loadAuth } from 'redux/modules/auth';
 import {
     App,
     Home,
+    Stream,
     Widgets,
     Login,
     LoginSuccess,
@@ -48,6 +49,7 @@ export default (store) => {
             <Route path="survey" component={Survey}/>
             <Route path="widgets" component={Widgets}/>
             <Route path="account" component={Account}/>
+            <Route path="stream" component={Stream}/>
 
             { /* Catch all route */ }
             <Route path="*" component={NotFound} status={404}/>
