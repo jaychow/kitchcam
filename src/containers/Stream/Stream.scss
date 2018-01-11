@@ -27,10 +27,11 @@
   }
 }
 .imgPreview {
-  width: 10px;
+  width: 20px;
   background: #343d45;
-  height: 10px;
+  height: 20px;
   display: inline-block;
+  border-radius: 10px;
 }
 .chefNameTitle {
   font-size:12px;
@@ -39,4 +40,8 @@
   background: #2d2d2d url('../Stream/wood.png') no-repeat center center;
   height: 60px;
   width: 100%;
+}
+.token {
+  height: 30px;
+  width:30px;
 }
