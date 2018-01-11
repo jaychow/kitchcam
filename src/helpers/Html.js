@@ -53,11 +53,6 @@ export default class Html extends Component {
             <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(store.getState())};`}}
                     charSet="UTF-8"/>
             <script src={assets.javascript.main} charSet="UTF-8"/>
-            <script>
-                $(document).ready(function(){
-                $('[data-toggle="tooltip"]').tooltip();
-            });
-            </script>
             </body>
             </html>
         );
