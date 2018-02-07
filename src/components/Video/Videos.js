@@ -1,41 +1,8 @@
-import React, { Component, PropTypes } from 'react';
-import Helmet from 'react-helmet';
-import {connect} from 'react-redux';
-import {initializeWithKey} from 'redux-form';
+import React, { Component } from 'react';
 // import { Link } from 'react-router';
 // import config from '../../config';
-import { asyncConnect } from 'redux-async-connect';
-import * as chefActions from 'redux/modules/chef';
-import { TopChefs } from 'components';
-import {isLoaded, findTopChefs as findTopChefs} from 'redux/modules/chef';
 
-@asyncConnect([{
-    deferred: true,
-    promise: ({store: {dispatch, getState}}) => {
-        if (!isLoaded(getState())) {
-            return dispatch(findTopChefs());
-        }
-    }
-}])
-@connect(
-    state => ({
-        chefs: state.chef.data,
-        editing: state.chef.editing,
-        error: state.chef.error,
-        loading: state.chef.loading
-    }),
-    {...chefActions, initializeWithKey})
-export default class Home extends Component {
-    static propTypes = {
-        topChefs: PropTypes.array,
-        error: PropTypes.string,
-        loading: PropTypes.bool,
-        initializeWithKey: PropTypes.func.isRequired,
-        editing: PropTypes.object.isRequired,
-        findTopChefs: PropTypes.func.isRequired,
-        editStart: PropTypes.func.isRequired
-    };
-
+export default class Video extends Component {
     state = {
         foodType: 'Chicken',
         country: 'Indian',
@@ -43,16 +10,10 @@ export default class Home extends Component {
         showOptions: false
     };
 
-    componentDidMount() {
-        console.log(this.props.findTopChefs());
-    }
-
     handleToggleOptions = () => this.setState({showOptions: !this.state.showOptions});
     handleToggleCountryList = () => this.setState({countryList: !this.state.countryList});
 
     render() {
-        console.log(this.props.topChefs);
-
         const styles = require('./Home.scss');
 
         return (
@@ -66,7 +27,23 @@ export default class Home extends Component {
                     </div>
                     <div className={styles.topChefs + ' hidden-xs col-sm-4'}>
                         <div>Top Live Chefs</div>
-                        <TopChefs />
+                        <ul className="list-unstyled">
+                            <li>
+                                <div className={styles.videoPreview}></div>
+                                <span className={styles.chefName}>Patrick Impey - Lasagna</span>
+                            </li>
+                            <li><div className={styles.videoPreview}></div>
+                                <span className={styles.chefName}>Ali Fernandez - Chicken Piccata</span>
+                            </li>
+                            <li>
+                                <div className={styles.videoPreview}></div>
+                                <span className={styles.chefName}>Mike Woo - Pork Wontons</span>
+                            </li>
+                            <li>
+                                <div className={styles.videoPreview}></div>
+                                <span className={styles.chefName}>Jonny Conner - Cereal</span>
+                            </li>
+                        </ul>
                     </div>
                     <div className="col-xs-12 col-sm-8">
                         <h5>Chicken Picatta<span className={styles.chefNameTitle}> - By Ali Fernandez</span></h5>

@@ -5,3 +5,6 @@
  *
  */
 
+export Chef from './Chef/Chef';
+export Chefs from './Chef/Chefs';
+export TopChefs from './Chef/TopChefs';

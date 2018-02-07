@@ -16,7 +16,7 @@ export default class Stream extends Component {
                 <div className="row">
                     <div className="col-xs-12">
                         <div className="pull-right">
-                            <span className="acceptedTips">Accepted Tips: </span>
+                            <span className="acceptedTips">Tip the Chef: </span>
                             <img className={styles.token} data-toggle="tooltip" title="Reddcoin!"
                                  height="50" width="50" src={reddcoinLogo}></img>
                         </div>
@@ -32,18 +32,18 @@ export default class Stream extends Component {
                         <ul className="list-unstyled">
                             <li>
                                 <div className={styles.imgPreview}></div>
-                                <span className={styles.chefName}>Patrick Impey - Yum that looks so tasty</span>
+                                <span className={styles.chefName}>Patricus - Yum that looks so tasty</span>
                             </li>
                             <li><div className={styles.imgPreview}></div>
-                                <span className={styles.chefName}>Ali Fernandez - MMMM I want to make this</span>
+                                <span className={styles.chefName}>Ali_ferrealz - MMMM I want to make this</span>
                             </li>
                             <li>
                                 <div className={styles.imgPreview}></div>
-                                <span className={styles.chefName}>Mike Woo - OooooLALA</span>
+                                <span className={styles.chefName}>Mikey - OooooLALA</span>
                             </li>
                             <li>
                                 <div className={styles.imgPreview}></div>
-                                <span className={styles.chefName}>Jonny Conner - #WANTTT</span>
+                                <span className={styles.chefName}>Jonjon - #WANTTT</span>
                             </li>
                             <input type="text" placeholder="Enter Text"/>
                             <button className="btn btn-default"> Send</button>
