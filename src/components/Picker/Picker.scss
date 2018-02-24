@@ -1,0 +1,142 @@
+@import "../../theme/variables.scss";
+
+.picker {
+  background-color: #343d45;
+  color: #3c3b3b;
+  $dark: #555;
+  $color--primary: #d5d5d5;
+
+  .typo {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #585858;
+    text-decoration: none;
+    option {
+      font-size: 30px;
+    }
+  }
+
+  .transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .wrapper {
+    padding-top: 150px;
+    height: 100vh;
+    font-size: 60px;
+  }
+
+  .list {
+    display: inline-block;
+    position: relative;
+    margin-left: 6px;
+    ul {
+      border-radius: 0px 0px 5px 5px;
+      text-align: left;
+      position: absolute;
+      padding: 0px 0px 5px 0px;
+      top: 38px;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #303030;
+      //border: 1px solid #fff;
+    }
+    li {
+      list-style:none;
+      padding: 0px 5px 0px 5px;
+      cursor: pointer;
+      &:hover {
+        background: lighten(#303030, 10%);
+      }
+    }
+    a {
+      @extend .typo;
+      width:100%;
+      transition: all .4s;
+      color: $color--primary;
+      position: relative;
+      font-size:12px;
+      &:hover {
+        cursor: pointer;
+        color: lighten($color--primary, 20%);
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  select {
+    display: inline;
+    border: 0;
+    width: auto;
+    margin-left: 10px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-bottom: 2px solid $dark;
+    color: $color--primary;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    option {
+      border: 0;
+      border-bottom: 1px solid $dark;
+      padding: 10px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+  }
+
+  .placeholder {
+    border-bottom: 4px solid;
+    cursor: pointer;
+    &:hover {
+      color: lighten(#3c3b3b, 15%);
+    }
+  }
+  .topChefs {
+    li {
+      padding:5px;
+      margin-top:5px;
+    }
+    .chefName {
+      position: relative;
+      top: -9px;
+      left: 10px;
+    }
+  }
+  .videoPreview {
+    width:40px;
+    background: #e3e3e3;
+    height:30px;
+    display: inline-block;
+  }
+}
+.videoContainer {
+  padding: 100px;
+  background: #e3e3e3;
+  text-align: center;
+  color: #333;
+}
+
+.chefNameTitle {
+  font-size:12px;
+}
+
+.previewVideo {
+  width: 60px;
+  height: 40px;
+  background: #e3e3e3;
+}
+.cookPreview {
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('./marble-white.jpg');
+  //background: #3b5769;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

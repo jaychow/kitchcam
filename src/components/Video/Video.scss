@@ -1,0 +1,25 @@
+.topChefs {
+  li {
+    padding:5px;
+    margin-top:5px;
+  }
+  .chefName {
+    position: relative;
+    top: -9px;
+    left: 10px;
+  }
+}
+.videoPreview {
+  position:relative;
+  margin-bottom:10px;
+}
+.placeholder {
+  width: 100%;
+  background: #e3e3e3;
+  height: 143px;
+  display: inline-block;
+}
+.viewing {
+  position: absolute;
+  right: 0;
+}

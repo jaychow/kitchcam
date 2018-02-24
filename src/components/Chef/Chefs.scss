@@ -2,12 +2,12 @@
   li {
     padding:5px;
     margin-top:5px;
-  }
-  .chefName {
     position: relative;
-    top: -9px;
-    left: 10px;
   }
+}
+.chefName {
+  position: absolute;
+  padding:10px;
 }
 .videoPreview {
   width:40px;
