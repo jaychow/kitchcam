@@ -1,7 +1,7 @@
 @import "../../theme/variables.scss";
 
 .register {
-  background-color: #343d45;
+  background-color: $site-background-color;
   color: #e3dbd8;
   .menuRegister {
     background: url('./menu.jpg');

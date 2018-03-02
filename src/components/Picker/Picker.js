@@ -9,7 +9,7 @@ export default class Picker extends Component {
     };
 
     state = {
-        foodType: 'Chicken',
+        foodType: this.props.options[0],
         country: 'Indian',
         countryList: false,
         showOptions: false,
@@ -22,8 +22,8 @@ export default class Picker extends Component {
 
     renderOptions() {
         return this.props.options.map((item, key) =>
-            <li key={key}>
-                <a onClick={() => this.setState({foodType: item, showOptions: false})}>
+            <li key={key} onClick={() => this.setState({foodType: item, showOptions: false})}>
+                <a>
                     {item}
                 </a>
             </li>
@@ -39,7 +39,7 @@ export default class Picker extends Component {
                     <div className="col-xs-12 bottom-space">
                         <h2>{this.props.title} ... <div className={styles.list}>
                                 <span onClick={this.handleToggleOptions} className={styles.placeholder}>
-                                    {this.state[this.props.type]} <i className="fa fa-sort-down" />
+                                    {this.state.foodType} <i className="fa fa-sort-down" />
                                 </span>
                             <ul className={this.state.showOptions ? '' : 'hidden'}>
                                 {this.renderOptions()}

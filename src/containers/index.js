@@ -8,3 +8,5 @@ export LoginSuccess from './LoginSuccess/LoginSuccess';
 export Survey from './Survey/Survey';
 export NotFound from './NotFound/NotFound';
 export Register from './Register/Register';
+export Kitchen from './Kitchen/Kitchen';
+

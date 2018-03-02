@@ -1,47 +1,58 @@
 @import "../../theme/variables.scss";
 
-.home {
-  background-color: #343d45;
-  color: #f5f5f5;
-}
-.videoContainer {
-  padding: 200px;
-  background: #e3e3e3;
-  text-align: center;
-  color: #333;
-}
-.chat {
-  font-size: 10px;
-  height: 100%;
-  position: relative;
-  background: #e3e3e3;
-  color: #000;
-  border-left: 2px solid #343d45;
-  li {
-    padding:5px;
-    margin-top:5px;
+.streamPage {
+  background-color: $site-background-color;
+  color: $site-color;
+  .videoContainer {
+    padding: 200px;
+    background: #e3e3e3;
+    text-align: center;
+    color: #333;
+    .videoInfo {
+
+    }
   }
-  .chefName {
+  .chat {
+    font-size: 10px;
+    height: 100%;
     position: relative;
-    left: 10px;
+    background: #e3e3e3;
+    color: #000;
+    border-left: 2px solid #343d45;
+    li {
+      padding:5px;
+      margin-top:5px;
+    }
+    .chefName {
+      position: relative;
+      left: 10px;
+    }
   }
-}
-.imgPreview {
-  width: 20px;
-  background: #343d45;
-  height: 20px;
-  display: inline-block;
-  border-radius: 10px;
-}
-.chefNameTitle {
-  font-size:12px;
-}
-.woodHeader {
-  background: #2d2d2d url('../Stream/wood.png') no-repeat center center;
-  height: 60px;
-  width: 100%;
-}
-.token {
-  height: 30px;
-  width:30px;
+  .imgPreview {
+    width: 20px;
+    background: $site-background-color;
+    height: 20px;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  .chefNameTitle {
+    font-size:12px;
+  }
+  .woodHeader {
+    background: #2d2d2d url('../Stream/wood.png') no-repeat center center;
+    height: 60px;
+    width: 100%;
+  }
+  .token {
+    height: 30px;
+    width:30px;
+  }
+  .videoInfo {
+    position: relative;
+  }
+  .viewing {
+    position:absolute;
+    right:0;
+    top:10px;
+  }
 }

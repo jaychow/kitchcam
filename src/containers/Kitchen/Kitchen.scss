@@ -1,88 +1,14 @@
 @import "../../theme/variables.scss";
 
-.register {
-  background-color: #343d45;
-  color: #e3dbd8;
-  .menuRegister {
-    background: url('./menu.jpg');
-    background-size:cover;
-    min-height:1000px;
-    width:100%;
-    position: relative;
-    padding:10px;
-    margin-top:-20px;
-    @media (max-width: 767px) {
-      margin-top:-15px;
-      min-height:600px;
+.kitchen {
+  background-color: $site-background-color;
+  color: $site-color;
+  height:100vh;
+  .kitchenChat {
+    border-left:1px solid #e3e3e3;
+    .kitchenChats{
+      height:200px;
     }
-    @media (max-width: 500px) {
-      background-repeat:no-repeat;
-      background-position:center;
-      margin-top:0;
-    }
-    h1 {
-      text-align: center;
-      margin:0;
-      @media (max-width: 767px) {
-        font-size:20px;
-      }
-    }
-  }
-  .registerContent {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
-    form {
-      margin-top: 80px;
-    }
-    .registerInput {
-      padding: 15px;
-      margin: 5px 0 22px 0;
-      display: inline-block;
-      border: none;
-      background: #f1f1f1;
-      width:100%;
-      color: #333;
-    }
-    input[type=text]:focus, input[type=password]:focus {
-      background-color: #ddd;
-      outline: none;
-    }
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      cursor: pointer;
-      opacity: 0.9;
-      width:50%;
-      border:1px solid #459E46;
-    }
-    button:hover {
-      opacity:1;
-    }
-    .cancelbtn {
-      padding: 14px 20px;
-      background-color: #f44336;
-    }
-    .cancelbtn, .signupbtn {
-      float: left;
-      width: 50%;
-    }
-    .clearfix::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-    @media screen and (max-width: 300px) {
-      .cancelbtn, .signupbtn {
-        width: 100%;
-      }
-    }
-  }
 
+  }
 }

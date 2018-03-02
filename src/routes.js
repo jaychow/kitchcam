@@ -11,7 +11,8 @@ import {
     Survey,
     NotFound,
     Account,
-    Register
+    Register,
+    Kitchen
 } from 'containers';
 
 export default (store) => {
@@ -50,8 +51,9 @@ export default (store) => {
             <Route path="survey" component={Survey}/>
             <Route path="widgets" component={Widgets}/>
             <Route path="account" component={Account}/>
-            <Route path="stream" component={Stream}/>
+            <Route path="username" component={Stream}/>
             <Route path="register" component={Register}/>
+            <Route path="kitchen" component={Kitchen}/>
 
             { /* Catch all route */ }
             <Route path="*" component={NotFound} status={404}/>

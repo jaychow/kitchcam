@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 // import { Link } from 'react-router';
-// import { CounterButton, GithubButton } from 'components';
+import { Picker } from 'components';
 // import config from '../../config';
 
 export default class Stream extends Component {
     render() {
         const styles = require('./Stream.scss');
         const reddcoinLogo = require('./reddcoin-logo.png');
+        const foodList = ['Chicken', 'Salad', 'Pasta', 'Appetizers', 'Dessert', 'Soup', 'Vegetarian', 'Vegan'];
 
         return (
-            <div className={styles.home + ' container-fluid'}>
+            <div className={styles.streamPage + ' container-fluid'}>
                 <div className="row"><div className={styles.woodHeader}></div></div>
                 <Helmet title="Home"/>
                 <div className="row">
@@ -23,7 +24,7 @@ export default class Stream extends Component {
                     </div>
                 </div>
                 <h3>Ali_ferrealz is cooking: Chicken Piccata</h3>
-                <div className="bottom-space">
+                <div className="row bottom-space">
                     <div className={styles.videoContainer + ' col-xs-12 col-sm-9'}>
                         This will be the promoted live video
                     </div>
@@ -50,12 +51,15 @@ export default class Stream extends Component {
                         </ul>
                     </div>
                     <div className="col-xs-12 col-sm-8">
-                        <h5>Chicken Picatta<span className={styles.chefNameTitle}> - By Ali Fernandez</span></h5>
-                        Yummmy yummy delicious chicken picatta dish come check out her small changes that make for
-                        a great recipe!
-                        - Click here to watch and chat live!
+                        <div className={styles.videoInfo}>
+                            <h5>Chicken Picatta<span className={styles.chefNameTitle}> - By Ali Fernandez</span></h5>
+                            Yummmy yummy delicious chicken picatta dish come check out her small changes that make for
+                            a great recipe!
+                            <div className={styles.viewing}>200</div>
+                        </div>
                     </div>
                 </div>
+                <Picker title="Chefs cooking" options={foodList} type="foodType"/>
             </div>
         );
     }
