@@ -7,59 +7,48 @@ import {mapUrl} from 'utils/url.js';
 import PrettyError from 'pretty-error';
 import http from 'http';
 import SocketIo from 'socket.io';
+/* uncomment for Test data*/
+/*var Chef = require('./actions/models/chefModel.js');
 
-/*var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/kitchcam');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
     console.log('connected to mongo');
 
-    var chefSchema = mongoose.Schema({
-        firstName:       String,
-        lastName:        String,
-        username:        String,
-        email:           String,
-        phone:           String,
-        subscriberCount: Number,
-        canStream:       Boolean
-    });
-
-    chefSchema.methods.greeting = function () {
-        var greeting = this.firstName
-            ? "Welcome to " + this.firstName + "'s Kitchen"
-            : "I don't have a name";
-        console.log(greeting);
-    };
-    var Chef = mongoose.model('Chef', chefSchema);
     var ali = new Chef({ firstName: 'Ali', lastName: 'Fernandez' });
     var pat = new Chef({ firstName: 'Patrick', lastName: 'Impey' });
     var jon = new Chef({ firstName: 'Jon', lastName: 'Connor' });
     var mike = new Chef({ firstName: 'Mike', lastName: 'Woo' });
+    var jay = new Chef({ firstName: 'Jay', lastName: 'Chow' });
     console.log(ali);
-    ali.greeting();
     ali.save(function (err, ali) {
         if (err) return console.error(err);
-        ali.greeting();
+        console.log('Saved Ali');
     });
     pat.save(function (err, ali) {
         if (err) return console.error(err);
-        ali.greeting();
+        console.log('Saved Pat');
     });
     jon.save(function (err, ali) {
         if (err) return console.error(err);
-        ali.greeting();
+        console.log('Saved Jon');
     });
     mike.save(function (err, ali) {
         if (err) return console.error(err);
-        ali.greeting();
+        console.log('Saved Mike');
+    });
+    jay.save(function (err, ali) {
+        if (err) return console.error(err);
+        console.log('Saved Jay');
     });
     Chef.find(function (err, chefs) {
         if (err) return console.error(err);
         console.log(chefs);
     });
-});
-*/
+});*/
+
 const pretty = new PrettyError();
 const app = express();
 
