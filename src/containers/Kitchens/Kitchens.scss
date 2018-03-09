@@ -1,0 +1,14 @@
+@import "../../theme/variables.scss";
+
+.kitchen {
+  background-color: $site-background-color;
+  color: $site-color;
+  height:100vh;
+  .kitchenChat {
+    border-left:1px solid #e3e3e3;
+    .kitchenChats{
+      height:200px;
+    }
+
+  }
+}

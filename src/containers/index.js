@@ -9,4 +9,5 @@ export Survey from './Survey/Survey';
 export NotFound from './NotFound/NotFound';
 export Register from './Register/Register';
 export Kitchen from './Kitchen/Kitchen';
+export Kitchens from './Kitchens/Kitchens';
 

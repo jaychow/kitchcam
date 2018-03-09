@@ -12,8 +12,7 @@ export default class Stream extends Component {
 
         return (
             <div className={styles.streamPage + ' container-fluid'}>
-                <div className="row"><div className={styles.woodHeader}></div></div>
-                <Helmet title="Home"/>
+                <Helmet title="USername's kitchen"/>
                 <div className="row">
                     <div className="col-xs-12">
                         <div className="pull-right">
@@ -25,37 +24,38 @@ export default class Stream extends Component {
                 </div>
                 <h3>Ali_ferrealz is cooking: Chicken Piccata</h3>
                 <div className="row bottom-space">
-                    <div className={styles.videoContainer + ' col-xs-12 col-sm-9'}>
-                        This will be the promoted live video
+                    <div className="col-xs-12">
+                        <div className={styles.videoContainer + ' col-xs-12 col-sm-9'}>
+                            This will be the promoted live video
+                        </div>
+                        <div className={styles.chat + ' hidden-xs col-sm-3'}>
+                            <div>Chat</div>
+                            <ul className="list-unstyled">
+                                <li>
+                                    <div className={styles.imgPreview}></div>
+                                    <span className={styles.chefName}>Patricus - Yum that looks so tasty</span>
+                                </li>
+                                <li><div className={styles.imgPreview}></div>
+                                    <span className={styles.chefName}>Ali_ferrealz - MMMM I want to make this</span>
+                                </li>
+                                <li>
+                                    <div className={styles.imgPreview}></div>
+                                    <span className={styles.chefName}>Mikey - OooooLALA</span>
+                                </li>
+                                <li>
+                                    <div className={styles.imgPreview}></div>
+                                    <span className={styles.chefName}>Jonjon - #WANTTT</span>
+                                </li>
+                                <input type="text" placeholder="Enter Text"/>
+                                <button className="btn btn-default"> Send</button>
+                            </ul>
+                        </div>
                     </div>
-                    <div className={styles.chat + ' hidden-xs col-sm-3'}>
-                        <div>Chat</div>
-                        <ul className="list-unstyled">
-                            <li>
-                                <div className={styles.imgPreview}></div>
-                                <span className={styles.chefName}>Patricus - Yum that looks so tasty</span>
-                            </li>
-                            <li><div className={styles.imgPreview}></div>
-                                <span className={styles.chefName}>Ali_ferrealz - MMMM I want to make this</span>
-                            </li>
-                            <li>
-                                <div className={styles.imgPreview}></div>
-                                <span className={styles.chefName}>Mikey - OooooLALA</span>
-                            </li>
-                            <li>
-                                <div className={styles.imgPreview}></div>
-                                <span className={styles.chefName}>Jonjon - #WANTTT</span>
-                            </li>
-                            <input type="text" placeholder="Enter Text"/>
-                            <button className="btn btn-default"> Send</button>
-                        </ul>
-                    </div>
-                    <div className="col-xs-12 col-sm-8">
+                    <div className="col-xs-12 col-sm-9">
                         <div className={styles.videoInfo}>
-                            <h5>Chicken Picatta<span className={styles.chefNameTitle}> - By Ali Fernandez</span></h5>
                             Yummmy yummy delicious chicken picatta dish come check out her small changes that make for
                             a great recipe!
-                            <div className={styles.viewing}>200</div>
+                            <div className={styles.viewing}><i className="fa fa-user"/> 200 </div>
                         </div>
                     </div>
                 </div>

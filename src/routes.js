@@ -12,7 +12,8 @@ import {
     NotFound,
     Account,
     Register,
-    Kitchen
+    Kitchen,
+    Kitchens
 } from 'containers';
 
 export default (store) => {
@@ -54,6 +55,7 @@ export default (store) => {
             <Route path="username" component={Stream}/>
             <Route path="register" component={Register}/>
             <Route path="kitchen" component={Kitchen}/>
+            <Route path="kitchens" component={Kitchens}/>
 
             { /* Catch all route */ }
             <Route path="*" component={NotFound} status={404}/>
