@@ -54,6 +54,7 @@ export default (store) => {
             <Route path="account" component={Account}/>
             <Route path="username" component={Stream}/>
             <Route path="register" component={Register}/>
+            <Route path="stream" component={Stream}/>
             <Route path="kitchen" component={Kitchen}/>
             <Route path="kitchens" component={Kitchens}/>
 
