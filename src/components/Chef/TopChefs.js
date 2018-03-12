@@ -6,7 +6,7 @@ export default class TopChefs extends Component {
         const styles = require('./Chefs.scss');
 
         return (
-            <div className={styles.topChefs + ' hidden-xs col-sm-4'}>
+            <div className={styles.topChefs + ' hidden-xs hidden-sm col-sm-4'}>
                 <div>Top KitchCam Chefs</div>
                 <ul className="list-unstyled">
                     <li>

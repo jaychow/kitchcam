@@ -76,7 +76,8 @@ export default class Home extends Component {
                     <div className={styles.headerBg + ' container'}>
                         <div className={styles.headerUnderlay + ' row bottom-space'}>
                             <div className={styles.videoContainer + ' col-xs-12 col-sm-8'}>
-                                This will be the promoted live video
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/OsuY82AyGHE"
+                                        frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                             </div>
                             <TopChefs />
                             <div className="col-xs-12 col-sm-8">
