@@ -16,21 +16,24 @@ export default class Account extends Component {
                 <div className="col-xs-12">
                     <h1 className={styles.accountHeader}>
                         <img className={styles.accountPhoto}
-                             height="300" data-toggle="tooltip" title="Patrick!" src={patrick}/>Account
+                             height="300" data-toggle="tooltip" title="Patrick!" src={patrick}/>Patrick Impey
                     </h1>
                     <button className={`${styles.streamButton} ${styles.raise} btn btn-default`}>
                         <i className="fa fa-video-camera"/> Start Stream</button>
+                    <hr/>
                 </div>
-                <div className="row">
-                    <div className="col-xs-4">
-                        1 of 3
-                    </div>
-                    <div className="col-xs-4">
-                        2 of 3 (wider)
-                    </div>
-                    <div className="col-xs-4">
-                        <img className={styles.spices}
-                             height="300" data-toggle="tooltip" title="Spices!" src={spices}/>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-12">
+                            userName: patrickus <a>Edit</a>
+                        </div>
+                        <div className="col-xs-12">
+                            Bio: BLAH BLAH BLAH <a>Edit</a>
+                        </div>
+                        <div className="col-xs-12 ">
+                            <img className={styles.spices}
+                                 height="300" data-toggle="tooltip" title="Spices!" src={spices}/>
+                        </div>
                     </div>
                 </div>
             </div>
