@@ -43,10 +43,14 @@
     height:50px;
     width:50px;
     margin-right:10px;
+    cursor:pointer
   }
   .accountPhoto:hover {
-    height:150px;
-    width:150px;
+    height: 100px;
+    width: 100px;
+    -webkit-transition: 1s;
+    transition: 1s;
+
   }
   .streamButton {
     margin-top: 20px;
@@ -58,10 +62,10 @@
     transform: translateY(-0.25em);
   }
   .raise {
-    color: #33b7a5;
+    color: #ccc;
     transition: 0.25s;
     background: transparent;
-
+    border-radius: 0;
     &:hover,
     &:focus {
       border-color: #33b7a5;
