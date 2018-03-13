@@ -66,10 +66,11 @@
     transition: 0.25s;
     background: transparent;
     border-radius: 0;
+    border-color: #33b7a5;
     &:hover,
     &:focus {
       border-color: #33b7a5;
-      color: #33b7a5;
+      color: #33e0ff;
     }
   }
 }

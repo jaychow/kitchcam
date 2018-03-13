@@ -16,7 +16,7 @@ export default class Account extends Component {
                 <div className="col-xs-12">
                     <h1 className={styles.accountHeader}>
                         <img className={styles.accountPhoto}
-                             height="300" data-toggle="tooltip" title="Spices!" src={patrick}/>Account
+                             height="300" data-toggle="tooltip" title="Patrick!" src={patrick}/>Account
                     </h1>
                     <button className={`${styles.streamButton} ${styles.raise} btn btn-default`}>
                         <i className="fa fa-video-camera"/> Start Stream</button>
