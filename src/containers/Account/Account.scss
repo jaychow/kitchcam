@@ -37,6 +37,8 @@
   }
   .spices{
     float:right;
+    position: absolute;
+    right: 30px;
   }
   .accountPhoto {
     border-radius: 50%;
@@ -50,6 +52,12 @@
     width: 100px;
     -webkit-transition: 1s;
     transition: 1s;
+  }
+  .accountEdit {
+    padding: 10px;
+  }
+  .accountInfo {
+    background: #333;
 
   }
   .streamButton {
@@ -65,7 +73,6 @@
     color: #ccc;
     transition: 0.25s;
     background: transparent;
-    //border-radius: 0;
     border-color: #33e0ff;
     &:hover,
     &:focus {

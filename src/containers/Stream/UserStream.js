@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import Webcam from 'react-webcam';
 // import { Link } from 'react-router';
 import { Picker, ChefBio } from 'components';
 // import config from '../../config';
 
-export default class Stream extends Component {
+export default class UserStream extends Component {
     render() {
         const styles = require('./Stream.scss');
         const reddcoinLogo = require('./reddcoin-logo.png');
@@ -25,8 +26,8 @@ export default class Stream extends Component {
                 <h3>Ali_ferrealz is cooking: Chicken Piccata</h3>
                 <div className="row bottom-space">
                     <div className="col-xs-12">
-                        <div className={styles.videoContainer + ' col-xs-12 col-sm-9'}>
-                            This will be the promoted live video
+                        <div className="col-xs-12 col-sm-9">
+                            <Webcam/>
                         </div>
                         <div className={styles.chat + ' hidden-xs col-sm-3'}>
                             <div>Chat</div>

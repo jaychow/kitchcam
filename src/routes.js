@@ -5,6 +5,7 @@ import {
     App,
     Home,
     Stream,
+    UserStream,
     Widgets,
     Login,
     LoginSuccess,
@@ -13,7 +14,8 @@ import {
     Account,
     Register,
     Kitchen,
-    Kitchens
+    Kitchens,
+    Chefs
 } from 'containers';
 
 export default (store) => {
@@ -52,9 +54,11 @@ export default (store) => {
             <Route path="survey" component={Survey}/>
             <Route path="widgets" component={Widgets}/>
             <Route path="account" component={Account}/>
+            <Route path="live" component={Chefs}/>
             <Route path="username" component={Stream}/>
             <Route path="register" component={Register}/>
             <Route path="stream" component={Stream}/>
+            <Route path="user-stream" component={UserStream}/>
             <Route path="kitchen" component={Kitchen}/>
             <Route path="kitchens" component={Kitchens}/>
 

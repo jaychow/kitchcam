@@ -1,11 +1,11 @@
-const LOAD = 'redux-example/widgets/LOAD';
-const LOAD_SUCCESS = 'redux-example/widgets/LOAD_SUCCESS';
-const LOAD_FAIL = 'redux-example/widgets/LOAD_FAIL';
-const EDIT_START = 'redux-example/widgets/EDIT_START';
-const EDIT_STOP = 'redux-example/widgets/EDIT_STOP';
-const SAVE = 'redux-example/widgets/SAVE';
-const SAVE_SUCCESS = 'redux-example/widgets/SAVE_SUCCESS';
-const SAVE_FAIL = 'redux-example/widgets/SAVE_FAIL';
+const LOAD = 'kitchcam/widgets/LOAD';
+const LOAD_SUCCESS = 'kitchcam/widgets/LOAD_SUCCESS';
+const LOAD_FAIL = 'kitchcam/widgets/LOAD_FAIL';
+const EDIT_START = 'kitchcam/widgets/EDIT_START';
+const EDIT_STOP = 'kitchcam/widgets/EDIT_STOP';
+const SAVE = 'kitchcam/widgets/SAVE';
+const SAVE_SUCCESS = 'kitchcam/widgets/SAVE_SUCCESS';
+const SAVE_FAIL = 'kitchcam/widgets/SAVE_FAIL';
 
 const initialState = {
     loaded: false,

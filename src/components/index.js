@@ -6,6 +6,7 @@
  */
 
 export Chef from './Chef/Chef';
+export ChefBio from './Chef/ChefBio';
 export Chefs from './Chef/Chefs';
 export TopChefs from './Chef/TopChefs';
 export VideoPreview from './Video/VideoPreview';

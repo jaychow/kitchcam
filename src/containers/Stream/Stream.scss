@@ -45,14 +45,15 @@
   }
   .token {
     height: 30px;
-    width:30px;
+    width: 30px;
   }
   .videoInfo {
     position: relative;
   }
   .viewing {
-    position:absolute;
-    right:0;
-    top:10px;
+    text-align: left;
+    /*position: absolute;
+    right: 0;
+    top: 10px;*/
   }
 }
