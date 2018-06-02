@@ -12,10 +12,10 @@ export default class ChefBio extends Component {
             <div className={styles.chefBio}>
                 <div className="container-fluid">
                     <div className="row bottom-space">
-                        <div className="col-xs-9">
+                        <div className="col-xs-12 col-sm-9">
                             {this.state.chefName}'s Bio goes here
                         </div>
-                        <div className="col-xs-3">
+                        <div className="col-xs-12 col-sm-3">
                             Recipe:
                             <ul>
                                 <li>1lb Chicken</li>
