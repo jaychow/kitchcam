@@ -1,0 +1,67 @@
+@import "../../theme/variables.scss";
+
+.chat {
+  font-size: 10px;
+  width: 100%;
+  position: relative;
+  background: #e3e3e3;
+  color: #000;
+  border-left: 2px solid #343d45;
+  padding: 10px;
+  height:65vh;
+  .messageList {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  li {
+    padding:5px;
+    margin-top:5px;
+  }
+  .messageDate {
+    position: absolute;
+    right:0;
+    bottom:0;
+    font-size: 9px;
+    color:#333;
+  }
+  .message {
+    color:#000;
+    margin:10px;
+  }
+  .imgPreview {
+    width: 20px;
+    background: $site-background-color;
+    height: 20px;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  .bubbleChat {
+    border: 1px solid;
+    padding:10px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .chatBox {
+    width: 100%;
+    padding:5px;
+  }
+  .closeChat {
+    position:absolute;
+    right:5px;
+    top:5px;
+  }
+  .showChat {
+    position:fixed;
+    right:10px;
+    top: 20%;
+  }
+  .chatParent {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .inputSection {
+    position: absolute;
+    bottom: 10px;
+  }
+}
