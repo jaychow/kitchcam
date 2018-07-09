@@ -52,8 +52,17 @@
   }
   .viewing {
     text-align: left;
-    /*position: absolute;
-    right: 0;
-    top: 10px;*/
+  }
+  .userToolbar {
+    width:100%;
+    background: #333;
+    padding:10px;
+    position: relative;
+  }
+  .followBtn {
+    position:absolute;
+    right: 20px;
+    top: 20px;
+
   }
 }

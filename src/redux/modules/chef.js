@@ -28,7 +28,7 @@ export default function reducer(state = initialState, action = {}) {
                 loading: true
             };
         case FIND_SUCCESS:
-            console.log('hereeeee');
+            console.log('hereeeee poop');
             return {
                 ...state,
                 loading: false,

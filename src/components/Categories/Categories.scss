@@ -1,0 +1,25 @@
+@import "../../theme/variables.scss";
+
+.categories {
+  .categoryBlock {
+    border:1px solid;
+    padding:20px;
+    width:100%;
+    height:150px;
+    margin-bottom: 20px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .categoryName {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) );
+    padding:10px;
+  }
+}

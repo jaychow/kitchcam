@@ -103,7 +103,7 @@ export default class Chat extends Component {
                         </input>
                         <i className="fa fa-cog"/>
                         <button className="btn btn-default pull-right"
-                                onClick={this.submitChat.bind(this)}> Send
+                                onClick={this.submitChat.bind(this)}> Send Message
                         </button>
                     </div>
                 </div>

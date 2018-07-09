@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-// import { Link } from 'react-router';
+import { Link } from 'react-router';
 // import { CounterButton, GithubButton } from 'components';
 // import config from '../../config';
 
@@ -19,8 +19,9 @@ export default class Account extends Component {
                             <img className={styles.accountPhoto}
                                  height="300" data-toggle="tooltip" title="Patrick!" src={patrick}/>Patrick Impey
                         </h1>
-                        <button className={`${styles.streamButton} ${styles.raise} btn btn-default`}>
-                            <i className="fa fa-video-camera"/> Start Stream</button>
+                        <Link to="/user-stream" className={`${styles.streamButton} ${styles.raise} btn btn-default`}>
+                            <i className="fa fa-video-camera"/> Start Stream
+                        </Link>
                         <hr/>
                     </div>
                 </div>

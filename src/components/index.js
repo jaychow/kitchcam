@@ -13,3 +13,4 @@ export VideoPreview from './Video/VideoPreview';
 export Videos from './Video/Videos';
 export Picker from './Picker/Picker';
 export Chat from './Chat/Chat';
+export Categories from './Categories/Categories';

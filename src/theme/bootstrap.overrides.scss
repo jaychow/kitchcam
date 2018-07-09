@@ -48,3 +48,20 @@ video {
   height:auto;
   max-height:80vh;
 }
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #33b7a5;
+  transform: translateY(-0.25em);
+}
+.raise {
+  color: #ccc;
+  transition: 0.25s;
+  background: transparent;
+  border-color: #33e0ff;
+  &:hover,
+  &:focus {
+    border-color: #33e0ff;
+    color: #33e0ff;
+  }
+}

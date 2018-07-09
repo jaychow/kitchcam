@@ -6,6 +6,10 @@ import { Picker, ChefBio, Chat } from 'components';
 // import config from '../../config';
 
 export default class UserStream extends Component {
+    showMedia(data) {
+        console.log(data);
+    }
+
     render() {
         const styles = require('./Stream.scss');
         const reddcoinLogo = require('./reddcoin-logo.png');
@@ -23,9 +27,9 @@ export default class UserStream extends Component {
                         </div>
                     </div>
                 </div>
-                <h3>Ali_ferrealz is cooking: Chicken Piccata</h3>
                 <div className={styles.userToolbar}>
-                    <button className="btn btn-default">Follow</button>
+                    <h3>Ali_ferrealz is cooking: Chicken Piccata</h3>
+                    <button className={styles.followBtn + ' btn btn-default raise'}>Follow</button>
                 </div>
                 <div className="row bottom-space">
                     <div id="webcamSpace" className="col-xs-12 col-sm-8">

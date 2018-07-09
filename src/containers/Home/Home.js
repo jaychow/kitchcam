@@ -6,7 +6,7 @@ import {initializeWithKey} from 'redux-form';
 // import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
 import * as chefActions from 'redux/modules/chef';
-import { TopChefs, Picker } from 'components';
+import { TopChefs, Picker, Categories } from 'components';
 import {isLoaded, findTopChefs as findTopChefs} from 'redux/modules/chef';
 
 @asyncConnect([{
@@ -47,10 +47,16 @@ export default class Home extends Component {
 
     componentWillMount() {
         this.props.findTopChefs().then((data) => {
-            this.setState({topChefs: data, loading: false});
+            if (!this.isUnmounted) {
+                this.setState({topChefs: data, loading: false});
+            }
         }).catch((error)=> {
             console.error('CHEF ERROR: ', error);
         });
+    }
+
+    componentWillUnMount() {
+        this.isUnmounted = true;
     }
 
     handleToggleOptions = () => this.setState({showOptions: !this.state.showOptions});
@@ -75,9 +81,11 @@ export default class Home extends Component {
                 <div className="row">
                     <div className={styles.headerBg + ' container'}>
                         <div className={styles.headerUnderlay + ' row bottom-space'}>
-                            <div className={styles.videoContainer + ' col-xs-12 col-sm-8'}>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/OsuY82AyGHE"
-                                        frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <div className="col-xs-12 col-sm-8">
+                                <div className={styles.videoContainer}>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OsuY82AyGHE"
+                                            frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                                </div>
                             </div>
                             <TopChefs />
                             <div className="col-xs-12 col-sm-8">
@@ -91,16 +99,7 @@ export default class Home extends Component {
                 </div>
                 <Picker title="Chefs specializing in" options={countryList} type="country"/>
                 <Picker title="Chefs cooking" options={foodList} type="foodType"/>
-                <div className="row bottom-space">
-                    <div className="col-xs-12">
-                        <h2>Categories</h2>
-                        <button className="btn btn-kitchen">Desserts</button>
-                        <button className="btn btn-kitchen">Dinner</button>
-                        <button className="btn btn-kitchen">Chicken</button>
-                        <button className="btn btn-kitchen">Salad</button>
-                        <button className="btn btn-kitchen">Pasta</button>
-                    </div>
-                </div>
+                <Categories />
             </div>
         );
     }
