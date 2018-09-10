@@ -20,7 +20,7 @@ export default class Chefs extends Component {
             case 'rating':
                 return 'Top Chefs';
             case 'time':
-                return 'Time Streaming';
+                return 'Time To Make';
             default:
                 return 'Sort';
         }

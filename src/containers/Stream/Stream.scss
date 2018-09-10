@@ -55,14 +55,18 @@
   }
   .userToolbar {
     width:100%;
-    background: #333;
-    padding:10px;
+    background: #286090;
+    padding:5px;
     position: relative;
+    border-radius: 5px;
+    margin: 5px 0;
+    h3 {
+      margin-top:10px;
+    }
   }
   .followBtn {
     position:absolute;
     right: 20px;
-    top: 20px;
-
+    top: 10px;
   }
 }

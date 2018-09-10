@@ -1,0 +1,30 @@
+.imageModal {
+  .closeButton {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    color: red;
+    font-size: 16px;
+  }
+  .editButton {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    cursor: pointer;
+    color: blue;
+    font-size: 16px;
+  }
+  .downloadButton {
+    position: absolute;
+    right: 45px;
+    top: 5px;
+    cursor: pointer;
+    color: #333333;
+    font-size: 16px;
+  }
+  .modalPhoto {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

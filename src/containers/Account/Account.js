@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
-// import { CounterButton, GithubButton } from 'components';
+import { ImageModal } from 'components';
 // import config from '../../config';
 
 export default class Account extends Component {
+    state = {
+        showImage: true
+    };
+
     render() {
         const styles = require('./Account.scss');
         const spices = require('./spices.jpg');
@@ -13,16 +17,19 @@ export default class Account extends Component {
         return (
             <div className={styles.account}>
                 <div className="container-fluid">
-                    <Helmet title="Account Page"/>
-                    <div className="col-xs-12">
-                        <h1 className={styles.accountHeader}>
-                            <img className={styles.accountPhoto}
-                                 height="300" data-toggle="tooltip" title="Patrick!" src={patrick}/>Patrick Impey
-                        </h1>
-                        <Link to="/user-stream" className={`${styles.streamButton} ${styles.raise} btn btn-default`}>
-                            <i className="fa fa-video-camera"/> Start Stream
-                        </Link>
-                        <hr/>
+                    <div className="row">
+                        <Helmet title="Account Page"/>
+                        <div className="col-xs-12">
+                            <h1 className={styles.accountHeader}>
+                                <img className={styles.accountPhoto}
+                                     height="300" data-toggle="tooltip" title="Patrick!" src={patrick}/>Patrick Impey
+                            </h1>
+                            <Link to="/user-stream"
+                                  className={`${styles.streamButton} ${styles.raise} btn btn-default`}>
+                                <i className="fa fa-video-camera"/> Start Stream
+                            </Link>
+                            <hr/>
+                        </div>
                     </div>
                 </div>
                 <div className="container">
@@ -51,6 +58,7 @@ export default class Account extends Component {
                         </div>
                     </div>
                 </div>
+                <ImageModal showModal={false}/>
             </div>
         );
     }

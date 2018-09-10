@@ -36,7 +36,7 @@ export default class UserStream extends Component {
                         <Webcam/>
                     </div>
                     <Chat/>
-                    <div className="col-xs-12 col-sm-8">
+                    <div className="col-xs-12">
                         <div className={styles.videoInfo + ''}>
                             Yummmy yummy delicious chicken picatta dish come check out her small changes that make for
                             a great recipe!

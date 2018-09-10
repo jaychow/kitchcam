@@ -8,7 +8,7 @@ import PrettyError from 'pretty-error';
 import http from 'http';
 import SocketIo from 'socket.io';
 /* uncomment for Test data*/
-/*var Chef = require('./actions/models/chefModel.js');
+var Chef = require('./actions/models/chefModel.js');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/kitchcam');
@@ -17,11 +17,11 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
     console.log('connected to mongo');
 
-    var ali = new Chef({ firstName: 'Ali', lastName: 'Fernandez' });
-    var pat = new Chef({ firstName: 'Patrick', lastName: 'Impey' });
-    var jon = new Chef({ firstName: 'Jon', lastName: 'Connor' });
-    var mike = new Chef({ firstName: 'Mike', lastName: 'Woo' });
-    var jay = new Chef({ firstName: 'Jay', lastName: 'Chow' });
+    var ali = new Chef({ firstName: 'Ali', lastName: 'Fernandez', rank: 10 });
+    var pat = new Chef({ firstName: 'Patrick', lastName: 'Impey', rank: 10 });
+    var jon = new Chef({ firstName: 'Jon', lastName: 'Connor', rank: 1 });
+    var mike = new Chef({ firstName: 'Mike', lastName: 'Woo', rank: 34 });
+    var jay = new Chef({ firstName: 'Jay', lastName: 'Chow', rank: 10 });
     console.log(ali);
     ali.save(function (err, ali) {
         if (err) return console.error(err);
@@ -47,7 +47,7 @@ db.once('open', function() {
         if (err) return console.error(err);
         console.log(chefs);
     });
-});*/
+});
 
 const pretty = new PrettyError();
 const app = express();
