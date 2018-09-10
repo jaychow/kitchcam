@@ -22,7 +22,7 @@ module.exports = Object.assign({
             meta: [
                 {name: 'description', content: 'All the modern best practices in one example.'},
                 {charset: 'utf-8'},
-                {property: 'og:site_name', content: 'Look at the best chefs and recipes'},
+                {property: 'og:site_name', content: 'KitchCam.com'},
                 {property: 'og:image', content: 'https://www.kitchcam.com/logo.png'},
                 {property: 'og:locale', content: 'en_US'},
                 {property: 'og:title', content: 'The number one spot to watch real chefs from around the world!'},
