@@ -14,7 +14,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/kitchcam');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
+/*db.once('open', function() {
     console.log('connected to mongo');
 
     var ali = new Chef({ firstName: 'Ali', lastName: 'Fernandez', rank: 10 });
@@ -22,7 +22,6 @@ db.once('open', function() {
     var jon = new Chef({ firstName: 'Jon', lastName: 'Connor', rank: 1 });
     var mike = new Chef({ firstName: 'Mike', lastName: 'Woo', rank: 34 });
     var jay = new Chef({ firstName: 'Jay', lastName: 'Chow', rank: 10 });
-    console.log(ali);
     ali.save(function (err, ali) {
         if (err) return console.error(err);
         console.log('Saved Ali');
@@ -49,6 +48,7 @@ db.once('open', function() {
     });
 });
 
+*/
 const pretty = new PrettyError();
 const app = express();
 
