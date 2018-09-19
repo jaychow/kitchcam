@@ -62,8 +62,12 @@ export default class App extends Component {
         this.props.logout();
     };
 
-    toggleLogin = () => {
-        this.setState({showLogin: !this.state.showLogin});
+    toggleLogin = (type = 'login') => {
+        console.log('here');
+        this.setState({
+            showLogin: !this.state.showLogin,
+            activeTab: type
+        });
     };
 
     render() {
@@ -116,7 +120,7 @@ export default class App extends Component {
                             <NavItem eventKey={1} onClick={this.toggleLogin}>
                                 Log in
                             </NavItem>
-                            <LinkContainer to="/register">
+                            <LinkContainer onClick={this.toggleLogin.bind(this, 'join')}>
                                 <NavItem eventKey={1}>
                                     Register
                                 </NavItem>
@@ -124,7 +128,9 @@ export default class App extends Component {
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-                <LoginModal isVisible={this.state.showLogin} toggleLogin={this.toggleLogin.bind(this)}/>
+                <LoginModal isVisible={this.state.showLogin}
+                            toggleLogin={this.toggleLogin.bind(this)}
+                            activeTab={this.state.activeTab || 'login'}/>
                 <div className={styles.appContent}>
                     {this.props.children}
                 </div>

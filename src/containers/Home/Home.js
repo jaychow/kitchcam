@@ -83,7 +83,7 @@ export default class Home extends Component {
                         <div className={styles.headerUnderlay + ' row bottom-space'}>
                             <div className="col-xs-12 col-sm-8">
                                 <div className={styles.videoContainer}>
-                                    <iframe width="100" height="auto" src="https://www.youtube.com/embed/OsuY82AyGHE"
+                                    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/OsuY82AyGHE"
                                             frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                                 </div>
                             </div>

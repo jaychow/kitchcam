@@ -14,7 +14,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/kitchcam');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-/*db.once('open', function() {
+db.once('open', function() {
     console.log('connected to mongo');
 
     var ali = new Chef({ firstName: 'Ali', lastName: 'Fernandez', rank: 10 });
@@ -48,7 +48,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
     });
 });
 
-*/
 const pretty = new PrettyError();
 const app = express();
 

@@ -14,16 +14,20 @@ export default class Chefs extends Component {
 
     getSortName() {
         const { location } = this.props;
-        switch (location.query.sort) {
-            case 'viewers':
-                return 'Most watchers';
-            case 'rating':
-                return 'Top Chefs';
-            case 'time':
-                return 'Time To Make';
-            default:
-                return 'Sort';
+        if (location) {
+            switch (location.query.sort) {
+                case 'viewers':
+                    return 'Most watchers';
+                case 'rating':
+                    return 'Top Chefs';
+                case 'time':
+                    return 'Time To Make';
+                default:
+                    return 'Sort';
+            }
         }
+
+        return 'Sort';
     }
 
     render() {

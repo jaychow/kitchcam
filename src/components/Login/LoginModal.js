@@ -11,11 +11,12 @@ export default class Login extends Component {
     static propTypes = {
         user: PropTypes.object,
         isVisible: PropTypes.bool,
-        toggleLogin: PropTypes.function
+        toggleLogin: PropTypes.function,
+        activeTab: PropTypes.string
     };
 
     state = {
-        selectedTab: 'login',
+        activeTab: this.props.activeTab || 'login',
         hidePass: true,
     }
 
@@ -24,23 +25,22 @@ export default class Login extends Component {
 
         return (
             <div className={combine(styles.cdUserModal, this.props.isVisible ? styles.isVisible : null)}>
-                <i className={combine('fa fa-times', styles.closeIcon)}/>
                 <div className={styles.cdUserModalContainer}>
                     <ul className={styles.cdSwitcher}>
                         <li>
-                            <a onClick={() => this.setState({selectedTab: 'login'})}
-                               className={this.state.selectedTab === 'login' ? styles.selected : null}>
+                            <a onClick={() => this.setState({activeTab: 'login'})}
+                               className={this.state.activeTab === 'login' ? styles.selected : null}>
                                 Sign in
                             </a>
                         </li>
                         <li>
-                            <a onClick={() => this.setState({selectedTab: 'join'})}
-                               className={this.state.selectedTab === 'join' ? styles.selected : null}>
+                            <a onClick={() => this.setState({activeTab: 'join'})}
+                               className={this.state.activeTab === 'join' ? styles.selected : null}>
                                 New account
                             </a>
                         </li>
                     </ul>
-                    <div id={styles.cdLogin} className={this.state.selectedTab === 'login' ? styles.isSelected : null}>
+                    <div id={styles.cdLogin} className={this.state.activeTab === 'login' ? styles.isSelected : null}>
                         <form className={styles.cdForm}>
                             <p className={styles.fieldset}>
                                 <label className={combine(styles.imageReplace, styles.cdEmail)}
@@ -72,10 +72,10 @@ export default class Login extends Component {
                             </p>
                         </form>
                         <p className={styles.cdFormBottomMessage}>
-                            <a onClick={() => this.setState({selectedTab: 'reset'})}>Forgot your password?</a>
+                            <a onClick={() => this.setState({activeTab: 'reset'})}>Forgot your password?</a>
                         </p>
                     </div>
-                    <div id={styles.cdSignup} className={this.state.selectedTab === 'join' ? styles.isSelected : null}>
+                    <div id={styles.cdSignup} className={this.state.activeTab === 'join' ? styles.isSelected : null}>
                         <form className={styles.cdForm}>
                             <p className={styles.fieldset}>
                                 <label className={combine(styles.imageReplace, styles.cdUsername)}
@@ -115,7 +115,7 @@ export default class Login extends Component {
                         </form>
                     </div>
                     <div id={styles.cdResetPassword}
-                         className={this.state.selectedTab === 'reset' ? styles.isSelected : null}>
+                         className={this.state.activeTab === 'reset' ? styles.isSelected : null}>
                         <p className={styles.cdFormMessage}>
                             Lost your password? Please enter your email address.
                             You will receive a link to create a new password.
@@ -137,7 +137,7 @@ export default class Login extends Component {
                             </p>
                         </form>
                         <p className={styles.cdFormBottomMessage}>
-                            <a onClick={() => this.setState({selectedTab: 'login'})}>
+                            <a onClick={() => this.setState({activeTab: 'login'})}>
                                 Back to log-in
                             </a>
                         </p>
