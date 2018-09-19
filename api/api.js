@@ -16,7 +16,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
     console.log('connected to mongo');
-
+/*
     var ali = new Chef({ firstName: 'Ali', lastName: 'Fernandez', rank: 10 });
     var pat = new Chef({ firstName: 'Patrick', lastName: 'Impey', rank: 10 });
     var jon = new Chef({ firstName: 'Jon', lastName: 'Connor', rank: 1 });
@@ -45,7 +45,7 @@ db.once('open', function() {
     Chef.find(function (err, chefs) {
         if (err) return console.error(err);
         console.log(chefs);
-    });
+    }); */
 });
 
 const pretty = new PrettyError();
