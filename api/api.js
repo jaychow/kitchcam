@@ -11,7 +11,7 @@ import SocketIo from 'socket.io';
 var Chef = require('./actions/models/chefModel.js');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/kitchcam');
+mongoose.connect('mongodb://localhost/kitchcam', { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
