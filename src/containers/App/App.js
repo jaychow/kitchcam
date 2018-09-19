@@ -12,6 +12,8 @@ import { push } from 'react-router-redux';
 import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
 
+import { LoginModal } from 'components';
+
 @asyncConnect([{
     promise: ({store: {dispatch, getState}}) => {
         const promises = [];
@@ -41,6 +43,10 @@ export default class App extends Component {
         store: PropTypes.object.isRequired
     };
 
+    state = {
+        showLogin: false
+    };
+
     componentWillReceiveProps(nextProps) {
         if (!this.props.user && nextProps.user) {
             // login
@@ -54,6 +60,10 @@ export default class App extends Component {
     handleLogout = (event) => {
         event.preventDefault();
         this.props.logout();
+    };
+
+    toggleLogin = () => {
+        this.setState({showLogin: !this.state.showLogin});
     };
 
     render() {
@@ -103,7 +113,7 @@ export default class App extends Component {
                             <strong>{user.name}</strong>.
                         </p>}
                         <Nav navbar pullRight>
-                            <NavItem eventKey={1} href="login">
+                            <NavItem eventKey={1} onClick={this.toggleLogin}>
                                 Log in
                             </NavItem>
                             <LinkContainer to="/register">
@@ -114,7 +124,7 @@ export default class App extends Component {
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-
+                <LoginModal isVisible={this.state.showLogin} toggleLogin={this.toggleLogin.bind(this)}/>
                 <div className={styles.appContent}>
                     {this.props.children}
                 </div>

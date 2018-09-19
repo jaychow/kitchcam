@@ -5,12 +5,12 @@
 
 .navbar-brand {
   position: relative;
-  color: #33b7a5;
+  color: #2f889a;
   padding: 2px 0px 0px 10px;
 }
 .navbar-default {
   background-color: #353535;
-  border-color: #33b7a5;
+  border-color: #2f889a;
 }
 .navbar-default .navbar-nav > li > a {
   color: #c0c5ce;
@@ -25,7 +25,7 @@
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #33e0ff;
+  color: #2f889a;
   background-color: transparent;
 }
 .navbar > .container {
@@ -37,7 +37,7 @@
 }
 .btn-kitchen {
   color: #343D46;
-  background-color: #33b7a5;
+  background-color: #2f889a;
   border-color: #333;
 }
 body {
@@ -51,17 +51,17 @@ video {
 
 .raise:hover,
 .raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em #33b7a5;
+  box-shadow: 0 0.5em 0.5em -0.4em #2f889a;
   transform: translateY(-0.25em);
 }
 .raise {
   color: #ccc;
   transition: 0.25s;
   background: transparent;
-  border-color: #33e0ff;
+  border-color: #2f889a;
   &:hover,
   &:focus {
-    border-color: #33e0ff;
-    color: #33e0ff;
+    border-color: #2f889a;
+    color: #2f889a;
   }
 }
