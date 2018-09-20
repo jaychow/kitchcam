@@ -120,11 +120,9 @@ export default class App extends Component {
                             <NavItem eventKey={1} onClick={this.toggleLogin}>
                                 Log in
                             </NavItem>
-                            <LinkContainer onClick={this.toggleLogin.bind(this, 'join')}>
-                                <NavItem eventKey={1}>
-                                    Register
-                                </NavItem>
-                            </LinkContainer>
+                            <NavItem eventKey={1} onClick={this.toggleLogin.bind(this, 'join')}>
+                                Register
+                            </NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
