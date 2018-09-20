@@ -1,4 +1,3 @@
-// import * as c from 'classnames';
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import * as authActions from 'redux/modules/auth';
@@ -11,7 +10,7 @@ export default class Login extends Component {
     static propTypes = {
         user: PropTypes.object,
         isVisible: PropTypes.bool,
-        toggleLogin: PropTypes.function,
+        toggleLogin: PropTypes.func,
         activeTab: PropTypes.string
     };
 

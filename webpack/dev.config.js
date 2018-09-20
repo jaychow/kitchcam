@@ -115,13 +115,11 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.IgnorePlugin(/webpack-stats\.json$/),
         new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"development"'
-            },
             __CLIENT__: true,
             __SERVER__: false,
             __DEVELOPMENT__: true,
             __DEVTOOLS__: true  // <-------- DISABLE redux-devtools HERE
         }),
+        webpackIsomorphicToolsPlugin.development()
     ]
 };
