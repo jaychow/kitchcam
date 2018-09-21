@@ -11,6 +11,7 @@ export default class Login extends Component {
         user: PropTypes.object,
         isVisible: PropTypes.bool,
         toggleLogin: PropTypes.func,
+        toggleTab: PropTypes.func,
         activeTab: PropTypes.string
     };
 
@@ -21,14 +22,16 @@ export default class Login extends Component {
 
     render() {
         const styles = require('./LoginModal.scss');
+        const {toggleTab} = this.props;
+        console.log('asadasd');
         console.log(this.props.activeTab);
-
+        console.log('asadasd');
         return (
             <div className={combine(styles.cdUserModal, this.props.isVisible ? styles.isVisible : null)}>
                 <div className={styles.cdUserModalContainer}>
                     <ul className={styles.cdSwitcher}>
                         <li>
-                            <a onClick={() => this.setState({activeTab: 'login'})}
+                            <a onClick={() => toggleTab('login')}
                                className={this.state.activeTab === 'login' ? styles.selected : null}>
                                 Sign in
                             </a>

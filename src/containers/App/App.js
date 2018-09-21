@@ -45,7 +45,8 @@ export default class App extends Component {
     };
 
     state = {
-        showLogin: false
+        showLogin: false,
+        activeTab: 'login'
     };
 
     componentWillReceiveProps(nextProps) {
@@ -61,6 +62,12 @@ export default class App extends Component {
     handleLogout = (event) => {
         event.preventDefault();
         this.props.logout();
+    };
+
+    toggleTab = (type = 'login') => {
+        this.setState({
+            activeTab: type
+        });
     };
 
     toggleLogin = (type = 'login') => {
@@ -129,7 +136,8 @@ export default class App extends Component {
                 </Navbar>
                 <LoginModal isVisible={this.state.showLogin}
                             toggleLogin={this.toggleLogin.bind(this)}
-                            activeTab={this.state.activeTab || 'login'}/>
+                            activeTab={this.state.activeTab}
+                            toggleTab={this.toggleTab.bind(this)} />
                 <div className={styles.appContent}>
                     {this.props.children}
                 </div>
