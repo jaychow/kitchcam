@@ -16,11 +16,12 @@ export default class Login extends Component {
 
     state = {
         activeTab: this.props.activeTab || 'login',
-        hidePass: true,
-    }
+        hidePass: true
+    };
 
     render() {
         const styles = require('./LoginModal.scss');
+        console.log(this.props.activeTab);
 
         return (
             <div className={combine(styles.cdUserModal, this.props.isVisible ? styles.isVisible : null)}>

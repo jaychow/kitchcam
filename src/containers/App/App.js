@@ -11,6 +11,7 @@ import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/module
 import { push } from 'react-router-redux';
 import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
+import classNames from 'classnames';
 
 import { LoginModal } from 'components';
 
@@ -63,7 +64,9 @@ export default class App extends Component {
     };
 
     toggleLogin = (type = 'login') => {
-        console.log('here');
+        console.log('hereeeee: ');
+        console.log(type);
+        console.log('poop');
         this.setState({
             showLogin: !this.state.showLogin,
             activeTab: type
@@ -73,6 +76,7 @@ export default class App extends Component {
     render() {
         const {user} = this.props;
         const styles = require('./App.scss');
+        console.log(this.state.activeTab);
 
         return (
             <div className={styles.app}>
@@ -100,30 +104,27 @@ export default class App extends Component {
                             <LinkContainer to="/account">
                                 <NavItem eventKey={3}>Account</NavItem>
                             </LinkContainer>
-
-                            {!user &&
-                            <LinkContainer to="/login">
-                                <NavItem eventKey={6}>Login</NavItem>
-                            </LinkContainer>}
-                            {user &&
-                            <LinkContainer to="/logout">
-                                <NavItem eventKey={7} className="logout-link" onClick={this.handleLogout}>
-                                    Logout
-                                </NavItem>
-                            </LinkContainer>}
                         </Nav>
                         {user &&
                         <p className={styles.loggedInMessage + ' navbar-text'}>Logged in as
                             <strong>{user.name}</strong>.
                         </p>}
-                        <Nav navbar pullRight>
-                            <NavItem eventKey={8} onClick={this.toggleLogin}>
+                        {user &&
+                        <LinkContainer to="/logout">
+                            <NavItem eventKey={7} className="logout-link" onClick={this.handleLogout}>
+                                Logout
+                            </NavItem>
+                        </LinkContainer>}
+                        {!user && <Nav navbar pullRight>
+                            <NavItem eventKey={8} onClick={this.toggleLogin}
+                                     className={classNames(styles.loginBtn, styles.navBtn)}>
                                 Log in
                             </NavItem>
-                            <NavItem eventKey={9} onClick={this.toggleLogin.bind(this, 'join')}>
+                            <NavItem eventKey={9} onClick={this.toggleLogin.bind(this, 'join')}
+                                     className={classNames(styles.joinBtn, styles.navBtn)}>
                                 Register
                             </NavItem>
-                        </Nav>
+                        </Nav>}
                     </Navbar.Collapse>
                 </Navbar>
                 <LoginModal isVisible={this.state.showLogin}
